@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextTextURL"
+            app:layout_constraintStart_toStartOf="parent"
+            android:hint="Kirjoita osoite"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/webView"/>
+    <Button
+            android:text="Mene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button"
+            android:onClick="goToSite"
+            app:layout_constraintStart_toEndOf="@+id/editTextTextURL"
+            app:layout_constraintEnd_toStartOf="@+id/button2" android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/webView"/>
+    <Button
+            android:text="Päivitä"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="reload" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/webView"/>
+    <WebView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="1dp"
+            android:layout_marginStart="1dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/webView" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:text="Initialize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/webView"
+            app:layout_constraintBottom_toBottomOf="parent" android:onClick="initialize"/>
+    <Button
+            android:text="Shout Out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button6"
+            app:layout_constraintEnd_toStartOf="@+id/button5" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webView" android:onClick="shoutOut"/>
+    <Button
+            android:text="Edellinen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button7"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/webView"
+            app:layout_constraintStart_toStartOf="parent" android:onClick="edellinen"/>
+    <Button
+            android:text="Seuraava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button8"
+            app:layout_constraintStart_toEndOf="@+id/button7" app:layout_constraintTop_toBottomOf="@+id/webView"
+            app:layout_constraintBottom_toBottomOf="parent" android:onClick="seuraava"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
